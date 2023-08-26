@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "907a76ea-b23e-4580-92cd-79c7c90fc341": {
+      "ProjectGuid": "907a76ea-b23e-4580-92cd-79c7c90fc341",
+      "DisplayName": "LibraryApi",
+      "ColorIndex": 0
+    },
+    "4edd1547-fc88-4dde-9e7e-a98faca24505": {
+      "ProjectGuid": "4edd1547-fc88-4dde-9e7e-a98faca24505",
+      "DisplayName": "Damen",
+      "ColorIndex": 1
+    },
+    "ecc8be0f-e6dc-4056-aba5-37d391e36d3e": {
+      "ProjectGuid": "ecc8be0f-e6dc-4056-aba5-37d391e36d3e",
+      "DisplayName": "Application",
+      "ColorIndex": 2
+    },
+    "62546df9-3a84-421d-8f03-8b35096541f9": {
+      "ProjectGuid": "62546df9-3a84-421d-8f03-8b35096541f9",
+      "DisplayName": "Infrastructure",
+      "ColorIndex": 3
+    },
+    "db853113-0165-4924-b130-89dd03c8e8f1": {
+      "ProjectGuid": "db853113-0165-4924-b130-89dd03c8e8f1",
+      "DisplayName": "Library",
+      "ColorIndex": 4
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 5
+}
