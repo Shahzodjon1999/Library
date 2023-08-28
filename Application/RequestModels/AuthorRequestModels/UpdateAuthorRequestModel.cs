@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Application.RequestModels.AuthorRequestModels
 {
-    internal class UpdateAuthorRequestModel
+    public class UpdateAuthorRequestModel
     {
         public string Name { get; set; } = string.Empty;
 

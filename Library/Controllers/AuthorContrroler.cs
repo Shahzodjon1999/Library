@@ -8,7 +8,6 @@ using Microsoft.AspNetCore.Mvc;
 namespace Library.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
     public class AuthorContrroler : ControllerBase
     {
         private readonly IAuthorService _authorService;
@@ -18,53 +17,54 @@ namespace Library.Controllers
             _authorService = authorService;
         }
 
-        [HttpPost]
-        public Task<string> create([FromBody] CreateAuthorRequestModel createAuthorRequest)
+        [HttpPost(ApiEndPoints.Author.Create)]
+        public async Task<IActionResult> create([FromBody] CreateAuthorRequestModel createAuthorRequest)
         {
             var res = createAuthorRequest.MapToAuthor();
 
-            _authorService.Create(res);
+             await  _authorService.Create(res);
 
-            return Task.FromResult("Seccessffull added!!!");
+            return Ok("Seccessfull added");
         }
 
-        [HttpGet]
+        [HttpGet(ApiEndPoints.Author.GetAll)]
         public Task<IEnumerable<Author>> Get()
         {
             return _authorService.GetAuthors();
         }
 
-        [HttpGet("{id}")]
-        public Task<Author> getById([FromRoute] Guid id)
+        [HttpGet(ApiEndPoints.Author.Get)]
+        public async Task<Author?> getById([FromRoute] Guid id)
         {
-            var author = _authorService.GetById(id);
+            var author = await _authorService.GetById(id);
 
             return author;
         }
 
-        [HttpPut("{id}")]
-        public Task<string> update([FromBody] CreateAuthorRequestModel createAuthorRequest, [FromRoute] Guid id)
+        [HttpPut(ApiEndPoints.Author.Update)]
+        public async Task<IActionResult> update([FromBody] UpdateAuthorRequestModel updateAuthorRequest, [FromRoute] Guid id)
         {
-            var result = createAuthorRequest.MapToAuthor();
+            var result =  updateAuthorRequest.MapToAuthorUpdate(id);
+
             if (result == null)
             {
-                return Task.FromResult("not found");
+                return Ok("not found");
             }
-            var author = _authorService.Update(result,id);
+            var author = await _authorService.Update(result,id);
 
-            return Task.FromResult("Seccessffull update!!!");
+            return Ok("Seccessfull update");
         }
 
         [HttpDelete("{id}")]
-        public Task<string> delete([FromRoute] Guid  id)
+        public async Task<IActionResult> delete([FromRoute] Guid  id)
         {
-            var author = _authorService.Delete(id);
-            if (author==null)
-            {
-                return Task.FromResult("not found");
-            }
-            return Task.FromResult("Seccessffull delete!!!");
-        }
+            var author = await _authorService.Delete(id);
 
+            if (author == false)
+            {
+                return Ok("Not found");
+            }
+            return Ok("Seccessfull delete");
+        }
     }
 }

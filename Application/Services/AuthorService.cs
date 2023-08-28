@@ -16,11 +16,11 @@ namespace Application.Services
             _authorRepository = authorRepository;
         }
 
-        public Task<string> Create(Author author)
+        public Task<bool> Create(Author author)
         {
             _authorRepository.Create(author);
 
-            return Task.FromResult("Seccessful added");
+            return Task.FromResult(true);
         }
 
         public Task<IEnumerable<Author>> GetAuthors()
@@ -29,25 +29,25 @@ namespace Application.Services
             return authors;
         }
 
-        public Task<Author> GetById(Guid id)
+        public Task<Author?> GetById(Guid id)
         {
             var author = _authorRepository.GetById(id);
 
             return author;
         }
 
-        public Task<string> Update(Author author,Guid id)
+        public Task<bool> Update(Author author,Guid id)
         {
-            _authorRepository.Update(author,id);
+            _authorRepository.Update(author);
 
-            return Task.FromResult("Seccessfull added");
+            return Task.FromResult(true);
         }
 
-        public Task<string> Delete(Guid id)
+        public Task<bool> Delete(Guid id)
         {
             _authorRepository.Delete(id);
 
-            return Task.FromResult("Sesscesfull deleted");
+            return Task.FromResult(true);
         }
     }
 }

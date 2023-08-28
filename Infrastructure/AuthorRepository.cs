@@ -1,5 +1,6 @@
 ﻿using Application.Services;
 using Damen.Models;
+using Infrastructure.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,53 +11,61 @@ namespace Infrastructure
 {
     public class AuthorRepository : IAuthorRepository
     {
-        public static List<Author> authors = new List<Author>()
+        private readonly AuthorDbContext _authorDbContext;
+
+        public AuthorRepository(AuthorDbContext authorDbContext)
         {
-            new Author{Name="Bobo",BookId=2},
+            _authorDbContext = authorDbContext;
+        }
 
-            new Author{Name="Author",BookId=3},
-
-            new Author{Name="Salom",BookId=4},
-        };
-
-        public Task<string> Create(Author author)
+        public Task<bool> Create(Author author)
         {
-            authors.Add(author);
+            _authorDbContext.Authors.AddAsync(author);
 
-            return Task.FromResult("Seccessful addedRepo");
+            _authorDbContext.SaveChangesAsync();
+
+            return Task.FromResult(true);
         }
 
         public Task<IEnumerable<Author>> GetAllAuthor()
         {
-            return Task.FromResult(authors.AsEnumerable());
+            var authors = _authorDbContext.Authors.AsEnumerable();
+
+            _authorDbContext.SaveChangesAsync();
+
+            return Task.FromResult(authors);
         }
 
-        public Task<Author> GetById(Guid id)
+        public Task<Author?> GetById(Guid id)
         {
-            var authorRes = authors.FirstOrDefault(i => i.id == id);
+            var author = _authorDbContext.Authors.FirstOrDefault(i => i.id == id);
 
-            return Task.FromResult(authorRes);
+            _authorDbContext.SaveChangesAsync();
+
+            return Task.FromResult(author);
         }
 
-        public Task<string> Update(Author author, Guid id)
+        public Task<bool> Update(Author author)
         {
-            var result = authors.FindIndex(i => i.id == author.id);
+            _authorDbContext.Authors.Update(author);
 
-            if (result > 0)
+            _authorDbContext.SaveChangesAsync();
 
-                authors[result] = author;
-
-            return Task.FromResult("Seccessful updateRepo");
-
-            return Task.FromResult("Not found");
-      
+            return Task.FromResult(true);
         }
 
-        public Task<string> Delete(Guid id)
+        public Task<bool> Delete(Guid id)
         {
-            var result = authors.RemoveAll(i => i.id == id);
+            var author = _authorDbContext.Authors.FirstOrDefault(i => i.id == id);
+            if (author ==null)
+            {
+                return Task.FromResult(false);
+            }
+            _authorDbContext.Authors.Remove(author);
 
-            return Task.FromResult("Seccessfull deleteRepo");
+            _authorDbContext.SaveChangesAsync();
+
+            return Task.FromResult(true);
         }
     }
 }

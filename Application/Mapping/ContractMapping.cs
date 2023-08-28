@@ -43,17 +43,17 @@ namespace Application.Mapping
             };
         }
 
-        //public static Author MaToAuthor1(this UpdateAuthorRequestModel updateAuthorRequest, Guid guid)
-        //{
-        //    return new Author
-        //    {
-        //        id = guid,
+        public static Author MapToAuthorUpdate(this UpdateAuthorRequestModel updateAuthorRequest,Guid id)
+        {
+            return new Author
+            {
+                id = id,
 
-        //        Name = updateAuthorRequest.Name,
+                Name = updateAuthorRequest.Name,
 
-        //        BookId = updateAuthorRequest.BookId
-        //    };
-        //}
+                BookId = updateAuthorRequest.BookId
+            };
+        }
 
 
     }

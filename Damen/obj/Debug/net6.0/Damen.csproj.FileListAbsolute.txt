@@ -2,6 +2,7 @@ C:\Users\User\Desktop\LibraryApi\Damen\bin\Debug\net6.0\Damen.deps.json
 C:\Users\User\Desktop\LibraryApi\Damen\bin\Debug\net6.0\Damen.dll
 C:\Users\User\Desktop\LibraryApi\Damen\bin\Debug\net6.0\ref\Damen.dll
 C:\Users\User\Desktop\LibraryApi\Damen\bin\Debug\net6.0\Damen.pdb
+C:\Users\User\Desktop\LibraryApi\Damen\obj\Debug\net6.0\Damen.csproj.AssemblyReference.cache
 C:\Users\User\Desktop\LibraryApi\Damen\obj\Debug\net6.0\Damen.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\User\Desktop\LibraryApi\Damen\obj\Debug\net6.0\Damen.AssemblyInfoInputs.cache
 C:\Users\User\Desktop\LibraryApi\Damen\obj\Debug\net6.0\Damen.AssemblyInfo.cs
@@ -9,4 +10,3 @@ C:\Users\User\Desktop\LibraryApi\Damen\obj\Debug\net6.0\Damen.csproj.CoreCompile
 C:\Users\User\Desktop\LibraryApi\Damen\obj\Debug\net6.0\Damen.dll
 C:\Users\User\Desktop\LibraryApi\Damen\obj\Debug\net6.0\ref\Damen.dll
 C:\Users\User\Desktop\LibraryApi\Damen\obj\Debug\net6.0\Damen.pdb
-C:\Users\User\Desktop\LibraryApi\Damen\obj\Debug\net6.0\Damen.csproj.AssemblyReference.cache

@@ -11,12 +11,12 @@ namespace Application.Services
     {
         Task<IEnumerable<Author>> GetAllAuthor();
 
-        Task<string> Create(Author author);
+        Task<bool> Create(Author author);
 
-        Task<string> Update(Author author, Guid id);
+        Task<bool> Update(Author author);
 
-        Task<string> Delete(Guid id);
+        Task<bool> Delete(Guid id);
 
-        Task<Author> GetById(Guid id);
+        Task<Author?> GetById(Guid id);
     }
 }
