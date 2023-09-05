@@ -1,5 +1,17 @@
-﻿using Application.Services;
-using Infrastructure.Data;
+﻿using Application.Repositories;
+using Application.Repositories.BookRepo;
+using Application.RequestModels;
+using Application.RequestModels.AuthorRequestModels;
+using Application.RequestModels.BookRequestModels;
+using Application.Services;
+using Application.Services.AllServices;
+using Application.Services.AllServicesInterfase;
+using Application.Services.AuthorsService;
+using Application.Services.BooksServices;
+using FluentValidation;
+using Infrastructure.Database;
+using Infrastructure.RepositoriesInfrastucture;
+using Infrastructure.RepositoriesInfrastucture.BookRepo;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,13 +27,42 @@ namespace Infrastructure
     {
         public static IServiceCollection AddApplication(this IServiceCollection services,IConfiguration configuration)
         {
-            services.AddDbContext<AuthorDbContext>(option => option.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<ContractDbContext>(option => option.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddScoped<IAuthorDbContext>(option => option.GetService<AuthorDbContext>());
+            services.AddScoped<IContractDbContext>(option => option.GetService<ContractDbContext>());
 
-            services.AddScoped<IAuthorService, AuthorService>();
+            services.AddTransient<IAuthorService, AuthorService>();
 
-            services.AddScoped<IAuthorRepository, AuthorRepository > ();
+            services.AddTransient<IAuthorRepository, AuthorRepository > ();
+
+
+            services.AddTransient<IBookService, BookService>();
+
+            services.AddTransient<IBookRepository, BookRepository>();
+
+
+            services.AddTransient<ICategoryService, CategoryService>();
+
+            services.AddTransient<ICategoryRepository, CategoryRepository>();
+
+            return services;
+        }
+
+        public static IServiceCollection AddAppValidation(this IServiceCollection services)
+        {
+            services.AddValidatorsFromAssembly(typeof(CreateAuthorRequestModel).Assembly);
+
+            services.AddValidatorsFromAssembly(typeof(UpdateAuthorRequestModel).Assembly);
+
+
+            services.AddValidatorsFromAssembly(typeof(CreateBookRequestModel).Assembly);
+
+            services.AddValidatorsFromAssembly(typeof(UpdateBookRequestModel).Assembly);
+
+
+            services.AddValidatorsFromAssembly(typeof(CreateCategoryRequestModel).Assembly);
+
+            services.AddValidatorsFromAssembly(typeof(UpdateCategoryRequestModel).Assembly);
 
             return services;
         }

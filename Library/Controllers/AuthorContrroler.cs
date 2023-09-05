@@ -1,8 +1,10 @@
 ﻿using Application.Mapping;
+using Application.Mapping.AuthorMapping;
 using Application.RequestModels.AuthorRequestModels;
+using Application.ResponsModels.AuthorResponsModel;
 using Application.Services;
+using Application.Services.AuthorsService;
 using Damen.Models;
-using Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Library.Controllers
@@ -20,51 +22,87 @@ namespace Library.Controllers
         [HttpPost(ApiEndPoints.Author.Create)]
         public async Task<IActionResult> create([FromBody] CreateAuthorRequestModel createAuthorRequest)
         {
-            var res = createAuthorRequest.MapToAuthor();
+            try
+            {
+               await _authorService.Create(createAuthorRequest);
 
-             await  _authorService.Create(res);
-
-            return Ok("Seccessfull added");
+                return Ok("Seccessfull added");
+            }
+            catch (NullReferenceException ex)
+            {
+                throw new NullReferenceException("AuthorController doesn't add createRequest in method create()" + ex.Message);
+            }
         }
 
         [HttpGet(ApiEndPoints.Author.GetAll)]
-        public Task<IEnumerable<Author>> Get()
+        public Task<AuthorsRespons> Get()
         {
-            return _authorService.GetAuthors();
-        }
+            try
+            {
+                var result = _authorService.GetAuthors();
+
+                return result;
+            }
+            catch (NullReferenceException)
+            {
+                throw new NullReferenceException("AuthorController doesn't find Authors in method Get()");
+            }        
+         }
 
         [HttpGet(ApiEndPoints.Author.Get)]
-        public async Task<Author?> getById([FromRoute] Guid id)
+        public async Task<AuthorResponse?> getById([FromRoute] Guid id)
         {
-            var author = await _authorService.GetById(id);
+            try
+            {
+                var author = await _authorService.GetById(id);
 
-            return author;
+                return author;
+            }
+            catch (Exception)
+            {
+                throw new NullReferenceException("AuthorController doesn't find id in method getById()");
+            }
+            
         }
 
         [HttpPut(ApiEndPoints.Author.Update)]
         public async Task<IActionResult> update([FromBody] UpdateAuthorRequestModel updateAuthorRequest, [FromRoute] Guid id)
         {
-            var result =  updateAuthorRequest.MapToAuthorUpdate(id);
-
-            if (result == null)
+            try
             {
+                if (updateAuthorRequest != null)
+                {
+                    await _authorService.Update(updateAuthorRequest, id);
+
+                    return Ok("Seccessfull update");
+                }
                 return Ok("not found");
             }
-            var author = await _authorService.Update(result,id);
-
-            return Ok("Seccessfull update");
+            catch (NullReferenceException)
+            {
+                throw new NullReferenceException("AuthorController doesn't find updateRequest in method update()");
+            }
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> delete([FromRoute] Guid  id)
         {
-            var author = await _authorService.Delete(id);
-
-            if (author == false)
+            try
             {
+                if (id != null)
+                {
+                    await _authorService.Delete(id);
+
+                    return Ok("Seccessfull delete");
+                }
                 return Ok("Not found");
             }
-            return Ok("Seccessfull delete");
+            catch (Exception)
+            {
+                throw new IndexOutOfRangeException("AuthorController doesn't find id");
+            }
+
+            
         }
     }
 }

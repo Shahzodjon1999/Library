@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Damen.Models
 {
-    public class Worker : Person
+    public class Worker
     {
         public Guid id { get; set; }
 
@@ -18,6 +18,11 @@ namespace Damen.Models
 
         public string Address { get; set; } = string.Empty;
 
+        public string UserName { get;set; } = string.Empty;
+
+        public string Password { get; set; }=string.Empty;
+
         public DateTime DateTime { get; set; }
+
     }
 }

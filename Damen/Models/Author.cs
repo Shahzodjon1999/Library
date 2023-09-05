@@ -12,7 +12,6 @@ namespace Damen.Models
 
         public string Name { get; set; }
 
-        public int BookId { get; set; }
-
+        public IEnumerable<Book> Books { get; set; }
     }
 }

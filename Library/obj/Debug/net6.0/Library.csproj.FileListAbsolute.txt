@@ -10,7 +10,11 @@ C:\Users\User\Desktop\LibraryApi\Library\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\User\Desktop\LibraryApi\Library\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\User\Desktop\LibraryApi\Library\bin\Debug\net6.0\Azure.Core.dll
 C:\Users\User\Desktop\LibraryApi\Library\bin\Debug\net6.0\Azure.Identity.dll
+C:\Users\User\Desktop\LibraryApi\Library\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\User\Desktop\LibraryApi\Library\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+C:\Users\User\Desktop\LibraryApi\Library\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\User\Desktop\LibraryApi\Library\bin\Debug\net6.0\Humanizer.dll
+C:\Users\User\Desktop\LibraryApi\Library\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\User\Desktop\LibraryApi\Library\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\User\Desktop\LibraryApi\Library\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\User\Desktop\LibraryApi\Library\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
@@ -40,6 +44,7 @@ C:\Users\User\Desktop\LibraryApi\Library\bin\Debug\net6.0\Microsoft.OpenApi.dll
 C:\Users\User\Desktop\LibraryApi\Library\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
 C:\Users\User\Desktop\LibraryApi\Library\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\User\Desktop\LibraryApi\Library\bin\Debug\net6.0\Mono.TextTemplating.dll
+C:\Users\User\Desktop\LibraryApi\Library\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\User\Desktop\LibraryApi\Library\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\User\Desktop\LibraryApi\Library\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\User\Desktop\LibraryApi\Library\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Damen.Models
 {
-    public class Customer : Person
+    public class Customer 
     {
         public Guid id { get; set; }
 

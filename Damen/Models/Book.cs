@@ -12,9 +12,13 @@ namespace Damen.Models
 
         public string Name { get; set; } = string.Empty;
 
-        public string AuthorId { get; set; }=string.Empty;
+        public Author Author { get; set; }
 
-        public string CategoryId { get; set; }=string.Empty;
+        public Guid AuthorId { get; set; }
+
+        public Category Category { get; set; }
+
+        public Guid CategoryId { get; set; }
 
         public int Count { get; set; }
     }
