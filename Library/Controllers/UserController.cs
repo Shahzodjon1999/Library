@@ -1,4 +1,5 @@
 ﻿using Damen.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
@@ -19,7 +20,7 @@ namespace Library.Controllers
             _configuration = configuration;
 
         }
-
+        [AllowAnonymous]
         [HttpPost]
         public IActionResult Auth([FromBody] User user)
         {
@@ -43,11 +44,6 @@ namespace Library.Controllers
                 new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
                 new Claim(JwtRegisteredClaimNames.Email, user.UserName),
                 });
-
-
-                    var expires = DateTime.UtcNow.AddMinutes(10);
-
-
                     var tokenDescriptor = new SecurityTokenDescriptor
                     {
                         Subject = subject,

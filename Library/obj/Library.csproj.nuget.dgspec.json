@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\LibraryApi\\Library\\Library.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\Library\\Library\\Library.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\LibraryApi\\Application\\Application.csproj": {
+    "C:\\Users\\Admin\\Desktop\\Library\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\LibraryApi\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Library\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\User\\Desktop\\LibraryApi\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\LibraryApi\\Application\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\Library\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\Library\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\User\\Desktop\\LibraryApi\\Damen\\Damen.csproj": {
-                "projectPath": "C:\\Users\\User\\Desktop\\LibraryApi\\Damen\\Damen.csproj"
+              "C:\\Users\\Admin\\Desktop\\Library\\Damen\\Damen.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Desktop\\Library\\Damen\\Damen.csproj"
               }
             }
           }
@@ -83,7 +83,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -92,21 +93,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.121\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\User\\Desktop\\LibraryApi\\Damen\\Damen.csproj": {
+    "C:\\Users\\Admin\\Desktop\\Library\\Damen\\Damen.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\LibraryApi\\Damen\\Damen.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Library\\Damen\\Damen.csproj",
         "projectName": "Damen",
-        "projectPath": "C:\\Users\\User\\Desktop\\LibraryApi\\Damen\\Damen.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\LibraryApi\\Damen\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\Library\\Damen\\Damen.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\Library\\Damen\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -137,7 +138,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -146,21 +148,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.121\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\User\\Desktop\\LibraryApi\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\Admin\\Desktop\\Library\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\LibraryApi\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Library\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\User\\Desktop\\LibraryApi\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\LibraryApi\\Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\Library\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\Library\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -174,8 +176,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\User\\Desktop\\LibraryApi\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\User\\Desktop\\LibraryApi\\Application\\Application.csproj"
+              "C:\\Users\\Admin\\Desktop\\Library\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Desktop\\Library\\Application\\Application.csproj"
               }
             }
           }
@@ -214,6 +216,14 @@
               "target": "Package",
               "version": "[7.0.10, )"
             },
+            "MySql.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
@@ -225,7 +235,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -234,21 +245,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.121\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\User\\Desktop\\LibraryApi\\Library\\Library.csproj": {
+    "C:\\Users\\Admin\\Desktop\\Library\\Library\\Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\LibraryApi\\Library\\Library.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Library\\Library\\Library.csproj",
         "projectName": "Library",
-        "projectPath": "C:\\Users\\User\\Desktop\\LibraryApi\\Library\\Library.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\LibraryApi\\Library\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\Library\\Library\\Library.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\Library\\Library\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -262,11 +273,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\User\\Desktop\\LibraryApi\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\User\\Desktop\\LibraryApi\\Application\\Application.csproj"
+              "C:\\Users\\Admin\\Desktop\\Library\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Desktop\\Library\\Application\\Application.csproj"
               },
-              "C:\\Users\\User\\Desktop\\LibraryApi\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\User\\Desktop\\LibraryApi\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\Admin\\Desktop\\Library\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Desktop\\Library\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -284,6 +295,10 @@
             "FluentValidation.AspNetCore": {
               "target": "Package",
               "version": "[11.3.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.23, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -310,7 +325,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -322,7 +338,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.121\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
