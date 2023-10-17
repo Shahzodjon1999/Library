@@ -5,11 +5,13 @@ using Application.ResponsModels.AuthorResponsModel;
 using Application.Services;
 using Application.Services.AuthorsService;
 using Damen.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Library.Controllers
 {
     [ApiController]
+    [Authorize]
     public class AuthorContrroler : ControllerBase
     {
         private readonly IAuthorService _authorService;

@@ -3,11 +3,13 @@ using Application.RequestModels.BookRequestModels;
 using Application.ResponsModels.BookResponsModel;
 using Application.Services.BooksServices;
 using Damen.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Library.Controllers
 {
     [ApiController]
+    [Authorize]
     public class BookController:ControllerBase
     {
         private readonly IBookService _bookService;

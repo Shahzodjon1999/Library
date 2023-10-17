@@ -2,12 +2,14 @@
 using Application.RequestModels;
 using Application.ResponsModels;
 using Application.Services.AllServicesInterfase;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Library.Controllers
 {
     [ApiController]
+    [Authorize]
     public class CategoryController : ControllerBase
     {
         private readonly ICategoryService _categoryService;
