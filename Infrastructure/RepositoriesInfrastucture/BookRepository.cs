@@ -51,7 +51,7 @@ namespace Infrastructure.RepositoriesInfrastucture.BookRepo
 
         }
 
-        public async Task<IEnumerable<Book>> GetAllBooks()
+        public async Task<IEnumerable<Book>> GetAll()
         {
             try
             {
@@ -63,6 +63,7 @@ namespace Infrastructure.RepositoriesInfrastucture.BookRepo
             }
         }
 
+     
         public async Task<Book?> GetById(Guid id)
         {
             try
@@ -87,7 +88,6 @@ namespace Infrastructure.RepositoriesInfrastucture.BookRepo
             {
                 throw new NullReferenceException("j");
             }
-
         }
     }
 }

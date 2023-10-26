@@ -38,13 +38,11 @@ namespace Library.Controllers
         }
 
         [HttpGet(ApiEndPoints.Book.GetAll)]
-        public async Task<BooksResponse> GetAll()
+        public async Task<ActionResult<BooksResponse>> GetAll()
         {
             try
             {
-                var books = await _bookService.GetBooks();
-
-                return books;
+                return await _bookService.GetBooks();
             }
             catch (Exception)
             {
@@ -54,13 +52,11 @@ namespace Library.Controllers
         }
 
         [HttpGet(ApiEndPoints.Book.Get)]
-        public async Task<BookResponse> GetById([FromRoute] Guid id)
+        public async Task<ActionResult<BookResponse?>> GetById([FromRoute] Guid id)
         {
             try
             {
-                var book = await _bookService.GetById(id);
-
-                return book;
+                return await _bookService.GetById(id);
             }
             catch (Exception)
             {
@@ -91,9 +87,13 @@ namespace Library.Controllers
         {
             try
             {
-                await _bookService.Delete(id);
+                if (id != null)
+                {
+                    await _bookService.Delete(id);
 
-                return Ok("Seccessfull Deleted");
+                    return Ok("Seccessfull Deleted");
+                }
+               return BadRequest("Didn't enter id");
             }
             catch (Exception)
             {

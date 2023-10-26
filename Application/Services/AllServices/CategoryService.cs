@@ -70,7 +70,7 @@ namespace Application.Services.AllServices
         {
             try
             {
-                var categorRespons = await _categoryRepository.GetAllCategories();
+                var categorRespons = await _categoryRepository.GetAll();
 
                 var result = categorRespons.MapToCategoriesResponse();
 

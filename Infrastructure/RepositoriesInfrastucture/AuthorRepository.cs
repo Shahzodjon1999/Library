@@ -33,7 +33,7 @@ namespace Infrastructure
             }
         }
 
-        public async Task<IEnumerable<Author>> GetAllAuthor()
+        public async Task<IEnumerable<Author>> GetAll()
         {
             try
             {

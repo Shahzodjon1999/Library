@@ -46,11 +46,11 @@ namespace Application.Services.AllServices
             }
         }
 
-        public async Task<RentBooksResponse> GetAuthors()
+        public async Task<RentBooksResponse> GetRentBooks()
         {
             try
             {
-              var rentBooks = await _rentBookRepository.GetAllRentBook();
+              var rentBooks = await _rentBookRepository.GetAll();
 
                 return rentBooks.MapToRentBooks();
             }

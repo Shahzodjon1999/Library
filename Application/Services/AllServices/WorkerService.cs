@@ -67,7 +67,7 @@ namespace Application.Services.AllServices
         {
             try
             {
-                var workers =await _workerRepository.GetAllCategories();
+                var workers =await _workerRepository.GetAll();
 
                return workers.MapToResponse();
             }

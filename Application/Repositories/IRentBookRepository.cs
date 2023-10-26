@@ -7,16 +7,8 @@ using System.Threading.Tasks;
 
 namespace Application.Repositories
 {
-    public interface IRentBookRepository
+    public interface IRentBookRepository:IBaseModel<RentBook>
     {
-        Task<IEnumerable<RentBook>> GetAllRentBook();
-
-        Task Create(RentBook rentBook);
-
-        Task Update(RentBook rentBook);
-
-        Task Delete(Guid id);
-
-        Task<RentBook?> GetById(Guid id);
+        
     }
 }

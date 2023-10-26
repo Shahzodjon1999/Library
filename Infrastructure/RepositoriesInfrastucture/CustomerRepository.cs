@@ -45,7 +45,7 @@ namespace Infrastructure.RepositoriesInfrastucture
 
         }
 
-        public async Task<IEnumerable<Customer>> GetAllCustomers()
+        public async Task<IEnumerable<Customer>> GetAll()
         {
             try
             {

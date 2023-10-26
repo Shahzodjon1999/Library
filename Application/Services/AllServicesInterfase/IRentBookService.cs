@@ -11,7 +11,7 @@ namespace Application.Services.AllServicesInterfase
 {
     public interface IRentBookService
     {
-        Task<RentBooksResponse> GetAuthors();
+        Task<RentBooksResponse> GetRentBooks();
 
         Task Create(CreateRentBookRequestModel rentbook);
 

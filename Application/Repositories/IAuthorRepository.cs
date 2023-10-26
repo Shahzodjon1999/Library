@@ -1,4 +1,5 @@
-﻿using Damen.Models;
+﻿using Application.Repositories;
+using Damen.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,16 +8,8 @@ using System.Threading.Tasks;
 
 namespace Application.Services
 {
-    public interface IAuthorRepository
+    public interface IAuthorRepository:IBaseModel<Author>
     {
-        Task<IEnumerable<Author>> GetAllAuthor();
-
-        Task Create(Author author);
-
-        Task Update(Author author);
-
-        Task Delete(Guid id);
-
-        Task<Author?> GetById(Guid id);
+      
     }
 }

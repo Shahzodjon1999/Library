@@ -7,16 +7,8 @@ using System.Threading.Tasks;
 
 namespace Application.Repositories
 {
-    public interface ICustomerRepository
+    public interface ICustomerRepository:IBaseModel<Customer>
     {
-        public Task<IEnumerable<Customer>> GetAllCustomers();
-
-        Task Create(Customer customer);
-
-        Task Update(Customer  customer);
-
-        Task Delete(Guid id);
-
-        Task<Customer?> GetById(Guid id);
+      
     }
 }

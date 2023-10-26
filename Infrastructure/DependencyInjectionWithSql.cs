@@ -45,6 +45,16 @@ namespace Infrastructure
 
             services.AddTransient<ICategoryRepository, CategoryRepository>();
 
+
+            services.AddTransient<ICustomerService, CustomerService>();
+
+            services.AddTransient<ICustomerRepository, CustomerRepository>();
+
+
+            services.AddTransient<IWorkerService, WorkerService>();
+
+            services.AddTransient<IWorkerRepository, WorkerRepository>();
+
             return services;
         }
 

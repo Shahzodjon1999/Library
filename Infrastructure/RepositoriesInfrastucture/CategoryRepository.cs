@@ -48,7 +48,7 @@ namespace Infrastructure.RepositoriesInfrastucture
             }
         }
 
-        public async Task<IEnumerable<Category>> GetAllCategories()
+        public async Task<IEnumerable<Category>> GetAll()
         {
             try
             {

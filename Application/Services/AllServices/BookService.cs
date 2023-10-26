@@ -54,7 +54,7 @@ namespace Application.Services.BooksServices
         {
             try
             {
-                var bookResponse = await _bookRepository.GetAllBooks();
+                var bookResponse = await _bookRepository.GetAll();
 
                 var books = bookResponse.MapToBooks();
 

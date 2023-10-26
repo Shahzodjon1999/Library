@@ -48,7 +48,7 @@ namespace Infrastructure.RepositoriesInfrastucture
             }
         }
 
-        public async Task<IEnumerable<RentBook>> GetAllRentBook()
+        public async Task<IEnumerable<RentBook>> GetAll()
         {
             try
             {

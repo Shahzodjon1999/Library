@@ -35,13 +35,11 @@ namespace Library.Controllers
         }
 
         [HttpGet(ApiEndPoints.Author.GetAll)]
-        public Task<AuthorsRespons> Get()
+        public async Task<ActionResult<AuthorsRespons>> Get()
         {
             try
             {
-                var result = _authorService.GetAuthors();
-
-                return result;
+                return await _authorService.GetAuthors();
             }
             catch (NullReferenceException)
             {
@@ -50,13 +48,11 @@ namespace Library.Controllers
          }
 
         [HttpGet(ApiEndPoints.Author.Get)]
-        public async Task<AuthorResponse?> getById([FromRoute] Guid id)
+        public async Task<ActionResult<AuthorResponse?>> getById([FromRoute] Guid id)
         {
             try
             {
-                var author = await _authorService.GetById(id);
-
-                return author;
+                return await _authorService.GetById(id);
             }
             catch (Exception)
             {
@@ -100,9 +96,7 @@ namespace Library.Controllers
             catch (Exception)
             {
                 throw new IndexOutOfRangeException("AuthorController doesn't find id");
-            }
-
-            
+            }   
         }
     }
 }

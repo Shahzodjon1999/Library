@@ -22,13 +22,13 @@ namespace Library.Controllers
         {
             try
             {
-                if (createCategoryRequest.Name != null)
+                if (createCategoryRequest is null)
                 {
-                    await _categoryService.Create(createCategoryRequest);
-
-                    return Ok("Seccesfull added");
+                    return BadRequest("createCategoryRequest.Name has null");
                 }
-                return BadRequest("createCategoryRequest.Name has null");
+                await _categoryService.Create(createCategoryRequest);
+
+                return Ok("Seccesfull added");
             }
             catch (Exception)
             {
@@ -37,13 +37,11 @@ namespace Library.Controllers
         }
 
         [HttpGet(ApiEndPoints.Category.GetAll)]
-        public async Task<CategoriesResponse> GetAll()
+        public async Task<ActionResult<CategoriesResponse>> GetAll()
         {
             try
             {
-               var categories = await _categoryService.GetCategories();
-
-                return categories;
+              return await _categoryService.GetCategories();
             }
             catch (Exception)
             {
@@ -52,13 +50,11 @@ namespace Library.Controllers
         }
 
         [HttpGet(ApiEndPoints.Category.Get)]
-        public async Task<CategoryResponse> GetById([FromRoute] Guid id)
+        public async Task<ActionResult<CategoryResponse?>> GetById([FromRoute] Guid id)
         {
             try
             {
-                var category = await _categoryService.GetById(id);
-
-                return category;
+                return await _categoryService.GetById(id);
             }
             catch (Exception)
             {
@@ -90,9 +86,13 @@ namespace Library.Controllers
         {
             try
             {
-                await _categoryService.Delete(id);
+                if (id != null)
+                {
+                    await _categoryService.Delete(id);
 
-                return Ok("Seccessfull delete");
+                    return Ok("Seccessfull delete");
+                }
+                return BadRequest("Don't enter Id");
             }
             catch (Exception)
             {

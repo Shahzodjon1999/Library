@@ -64,7 +64,7 @@ namespace Application.Services.AllServices
         {
             try
             {
-                var customers = await _customerRepository.GetAllCustomers();
+                var customers = await _customerRepository.GetAll();
 
                 return customers.MapToCustumers();
             }

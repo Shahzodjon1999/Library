@@ -43,7 +43,7 @@ namespace Application.Services.AuthorsService
         {
             try
             {
-                var authors =await _authorRepository.GetAllAuthor();
+                var authors =await _authorRepository.GetAll();
 
                 return  authors.MapToAuthorAllResponse();
             }

@@ -7,16 +7,8 @@ using System.Threading.Tasks;
 
 namespace Application.Repositories
 {
-    public interface ICategoryRepository
+    public interface ICategoryRepository:IBaseModel<Category>
     {
-        Task<IEnumerable<Category>> GetAllCategories();
-
-        Task Create(Category category);
-
-        Task Update(Category category);
-
-        Task Delete(Guid id);
-
-        Task<Category?> GetById(Guid id);
+        
     }
 }

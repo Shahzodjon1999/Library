@@ -50,7 +50,7 @@ namespace Infrastructure.RepositoriesInfrastucture
             }
         }
 
-        public async Task<IEnumerable<Worker>> GetAllCategories()
+        public async Task<IEnumerable<Worker>> GetAll()
         {
             try
             {

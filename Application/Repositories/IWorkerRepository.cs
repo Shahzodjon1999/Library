@@ -8,16 +8,8 @@ using System.Threading.Tasks;
 
 namespace Application.Repositories
 {
-    public interface IWorkerRepository
+    public interface IWorkerRepository:IBaseModel<Worker>
     {
-        Task<IEnumerable<Worker>> GetAllCategories();
 
-        Task Create(Worker worker);
-
-        Task Update(Worker worker);
-
-        Task Delete(Guid id);
-
-        Task<Worker?> GetById(Guid id);
     }
 }
