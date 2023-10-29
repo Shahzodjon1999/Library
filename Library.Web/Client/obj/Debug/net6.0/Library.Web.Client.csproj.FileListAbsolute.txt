@@ -1,6 +1,0 @@
-C:\Users\User\Desktop\LibraryApi\Library.Web\Client\obj\Debug\net6.0\Library.Web.Client.csproj.AssemblyReference.cache
-C:\Users\User\Desktop\LibraryApi\Library.Web\Client\obj\Debug\net6.0\Library.Web.Client.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\User\Desktop\LibraryApi\Library.Web\Client\obj\Debug\net6.0\Library.Web.Client.AssemblyInfoInputs.cache
-C:\Users\User\Desktop\LibraryApi\Library.Web\Client\obj\Debug\net6.0\Library.Web.Client.AssemblyInfo.cs
-C:\Users\User\Desktop\LibraryApi\Library.Web\Client\obj\Debug\net6.0\Library.Web.Client.csproj.CoreCompileInputs.cache
-C:\Users\User\Desktop\LibraryApi\Library.Web\Client\obj\Debug\net6.0\Library.Web.Client.MvcApplicationPartsAssemblyInfo.cache
