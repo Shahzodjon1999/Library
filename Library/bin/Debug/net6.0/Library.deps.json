@@ -11,9 +11,11 @@
           "Application": "1.0.0",
           "FluentValidation.AspNetCore": "11.3.0",
           "Infrastructure": "1.0.0",
+          "Microsoft.AspNetCore.Components.WebAssembly.Server": "7.0.13",
           "Microsoft.EntityFrameworkCore": "7.0.10",
           "Microsoft.EntityFrameworkCore.Design": "7.0.10",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.10",
+          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.14.0",
           "Swashbuckle.AspNetCore": "6.5.0"
         },
         "runtime": {
@@ -128,6 +130,7 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Components.WebAssembly.Server/7.0.13": {},
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
         "runtime": {
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
@@ -486,6 +489,7 @@
           }
         }
       },
+      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.14.0": {},
       "Microsoft.Win32.Registry/5.0.0": {
         "dependencies": {
           "System.Security.AccessControl": "5.0.0",
@@ -920,6 +924,13 @@
       "path": "microsoft.aspnetcore.authentication.jwtbearer/6.0.21",
       "hashPath": "microsoft.aspnetcore.authentication.jwtbearer.6.0.21.nupkg.sha512"
     },
+    "Microsoft.AspNetCore.Components.WebAssembly.Server/7.0.13": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gp8PFGsMmgbwHgtMXvjgMufJvSLYD9S914CejfliMjDXKXryvF4P1Qi3NL4aeQ+kDeV/W0nwIquivANeHC2/LQ==",
+      "path": "microsoft.aspnetcore.components.webassembly.server/7.0.13",
+      "hashPath": "microsoft.aspnetcore.components.webassembly.server.7.0.13.nupkg.sha512"
+    },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
       "type": "package",
       "serviceable": true,
@@ -1150,6 +1161,13 @@
       "sha512": "sha512-N4KeF3cpcm1PUHym1RmakkzfkEv3GRMyofVv40uXsQhCQeglr2OHNcUk2WOG51AKpGO8ynGpo9M/kFXSzghwug==",
       "path": "microsoft.sqlserver.server/1.0.0",
       "hashPath": "microsoft.sqlserver.server.1.0.0.nupkg.sha512"
+    },
+    "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.14.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yORzATlNmCp4kEwkxznLZ3maTaUJc5yTcu3aPufY8Tq4141/bRRWsa91u8I24MR3BTCCJlZO98xuQWB4arlKCw==",
+      "path": "microsoft.visualstudio.azure.containers.tools.targets/1.14.0",
+      "hashPath": "microsoft.visualstudio.azure.containers.tools.targets.1.14.0.nupkg.sha512"
     },
     "Microsoft.Win32.Registry/5.0.0": {
       "type": "package",

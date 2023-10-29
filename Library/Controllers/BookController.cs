@@ -100,5 +100,21 @@ namespace Library.Controllers
                 throw new NullReferenceException("BookController has null in the delete method");
             } 
         }
+
+        [HttpGet("date")]
+        public async Task<IActionResult> ShowDate([FromQuery] string start)
+        {
+            try
+            {
+                var hh = start;
+
+                return Ok($"{hh}+ {start}");
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }
