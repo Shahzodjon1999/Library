@@ -65,7 +65,7 @@ builder.Services.AddAppValidation();
 builder.Services.AddCors();
 //jsonSerializer
 //builder.Services.AddMvc().AddJsonOptions(options => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
-
+//builder.Services.AddApplicationInsightsTelemetry();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
